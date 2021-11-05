@@ -1,0 +1,36 @@
+{% load static %}
+{% load bootstrap4 %}
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      h1: {
+        color: black !important;
+      }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    {% bootstrap_css %}
+
+    <title>Geek Report!</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-primary">Geek Report Weasy Print!</h1>
+    </div>
+
+    <div class="container">
+        {% for p in texto %}
+          <p>{{ p }}</p>
+        {% endfor %}
+    </div>
+
+    <!-- Load JavaScript -->
+    {% bootstrap_javascript jquery='full' %}
+  </body>
+</html>
